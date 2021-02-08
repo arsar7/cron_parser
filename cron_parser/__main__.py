@@ -9,8 +9,8 @@ if __name__ == '__main__':
         logging.error(
             """
             Syntax error - run the file using an example like this: 
-            MAC OS - python3 parser 20:00 < config
-            Windows -parser 20:00 < config.txt  
+            MAC OS -  python3 cron_parser 20:00 < config
+            Windows - cron_parser 20:00 < config.txt  
         """
         )
         sys.exit()

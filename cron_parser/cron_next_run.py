@@ -107,6 +107,9 @@ class CronNextRun(CronParser):
         :return: next cron run time
         """
 
+        # TODO: Optimise this using calendar
+        #  package and perhaps timedelta for the intervals
+
         input_hr: int = line_dict['hour']
         input_min: int = line_dict['minute']
         valid_hr: int = valid_input['hour']
@@ -160,7 +163,6 @@ class CronNextRun(CronParser):
             run_hr = input_hr
 
         else:
-            ## we know both entries are specified
 
             if hrs_diff < 0:
                 run_day = 'tomorrow'
